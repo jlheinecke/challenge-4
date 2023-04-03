@@ -43,7 +43,7 @@ var myQuestions = [
 var q1
 var a1
 function start(){
-  // 1. start countdown
+  timer()
   var question = q1()
   // var answers = a1()
   var button = a1()
@@ -71,6 +71,30 @@ var d
   return [a,b,c,d]
 } 
 
-function check(){
-  if (b1 ===)
+// function check(){
+//   if (b1 ===)
+// }
+
+function show() {
+  var v1 = document.getElementById("show");
+  var v2 = document.getElementById("hide");
+  if (v1.style.display === "none") {
+     v1.style.display = "block";
+     v2.style.display = "none";
+  } else {
+     v1.style.display = "none";
+     v2.style.display = "block";
+  }
 }
+
+function timer(){
+var timeleft = 60;
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "Time's Up!";
+  } else {
+    document.getElementById("countdown").innerHTML = "Time: " + timeleft;
+  }
+  timeleft -= 1;
+}, 1000);}

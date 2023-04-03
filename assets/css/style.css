@@ -4,3 +4,12 @@
   width: 150px;
   margin: 2px;
 }
+
+#hide {
+  display: none;
+}
+
+nav button {
+  background-color: inherit;
+  border: none;
+}
