@@ -20,12 +20,12 @@ var container = document.getElementsByClassName('container');
 
 var myQuestions = [
   {
-    question: "Q1",
+    question: "What language is used to add style to a web page?",
     answers: {
-      1: "A1",
-      2: "A2",
-      3: "A3",
-      4: "A4"
+      1: "ABC",
+      2: "NBC",
+      3: "CSS",
+      4: "HBO"
     },
     correctAnswer: "2"
   },
@@ -57,7 +57,7 @@ function start(){
 }
 
 function q1(){
-  question = 'Q1'
+  question = 'What language is used to add style to a web page?'
   return question
 
 } 
@@ -67,13 +67,27 @@ var a
 var b
 var c
 var d
-  [a,b,c,d] = ['4','3','2','1']
+  [a,b,c,d] = ['NBC','ABC','CSS','HBO']
   return [a,b,c,d]
 } 
 
-// function check(){
-//   if (b1 ===)
-// }
+
+var correct = 3
+
+
+function check(input){
+
+  if (input === correct){
+    document.getElementById("message").innerHTML = "Correct!";
+  } else document.getElementById("message").innerHTML = "Incorrect!";
+  penalty();
+}
+var penalty
+function penalty(){
+  penalty = 5;
+  console.log(penalty)
+  return penalty;
+}
 
 function show() {
   var v1 = document.getElementById("show");
